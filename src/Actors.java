@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Actors {
     // Users and their permissions
 
@@ -6,6 +8,10 @@ public class Actors {
         String fullName;
         String email;
         int phoneNumber;
+
+        public Users() {
+            Scanner input = new Scanner(System.in);
+        }
 
     }
 
