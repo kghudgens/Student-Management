@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Users {
 
     // Get general information
-    String fullName;
-    String email;
-    int phoneNumber;
+    public String fullName;
+    public String email;
+    public int phoneNumber;
 
     public Users() {
         // Create scanner object
@@ -13,17 +13,23 @@ public class Users {
 
         // Prompt user for information regarding who they are
         System.out.println("What is your full name?");
-        fullName = input.nextLine();
+        this.fullName = input.nextLine();
 
         System.out.println("What is your email?");
-        email = input.nextLine();
+        this.email = input.nextLine();
 
         System.out.println("What is your phone number?");
-        phoneNumber = input.nextInt();
+        this.phoneNumber = input.nextInt();
 
         // close the scanner
         input.close();
 
+    }
+
+    // define purpose
+
+    public void userPurpose() {
+        // Find out if user is administrator, teacher, or student
     }
 
 }
