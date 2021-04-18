@@ -5,14 +5,19 @@ public class Administrator extends Users {
     /**
      * Creates a new student in the database
      */
-    private static void newStudent() {
+
+    public Administrator() {
+        System.out.println("Administrator yall");
+    }
+
+    public static void newStudent() {
 
     }
 
     /**
      * Deletes the student
      */
-    private static void deleteStudent() {
+    public static void deleteStudent() {
 
     }
 
