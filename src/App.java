@@ -11,15 +11,14 @@ public class App {
         // Call functiont that connects to database
         connectDatabase();
 
-        // Create instance of the user that collects the users info
-        Users user = new Users();
-
         // How will the user be using the program
         Scanner input = new Scanner(System.in);
 
+        System.out.println("What is your name? ");
+        String fullName = input.nextLine();
+
         // Prompt the user with their choices of privileges
 
-        user.getUserInfo();
         System.out.println(
                 user.fullName + " how will you be using the program? As an administrator, teacher, or student?");
 
@@ -33,7 +32,7 @@ public class App {
             if (usersPurporseSelection.equalsIgnoreCase("administrator")) {
 
                 Administrator admin = new Administrator();
-                System.out.println("Welcome " + admin.fullName + " as the administrator you have four options.");
+                System.out.println("Welcome " fullName + " as the administrator you have four options.");
 
                 break;
 
