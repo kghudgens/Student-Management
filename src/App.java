@@ -19,8 +19,7 @@ public class App {
 
         // Prompt the user with their choices of privileges
 
-        System.out.println(
-                user.fullName + " how will you be using the program? As an administrator, teacher, or student?");
+        System.out.println(fullName + " how will you be using the program? As an administrator, teacher, or student?");
 
         String usersPurporseSelection = input.nextLine();
 
@@ -32,7 +31,16 @@ public class App {
             if (usersPurporseSelection.equalsIgnoreCase("administrator")) {
 
                 Administrator admin = new Administrator();
-                System.out.println("Welcome " fullName + " as the administrator you have four options.");
+                System.out.println("Welcome " + fullName + " as the administrator you have four options.");
+
+                // To create
+                Administrator.newStudent();
+                // To read
+                admin.viewStudent();
+                // update
+                admin.updateStudent();
+                // to delete
+                Administrator.deleteStudent();
 
                 break;
 
