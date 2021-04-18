@@ -26,10 +26,14 @@ public class Users {
 
     }
 
-    // define purpose
+    // all users can view students in the database
+    public void viewStudent() {
+        // View a student
 
-    public void userPurpose() {
-        // Find out if user is administrator, teacher, or student
+    }
+
+    public static void updateStudent() {
+
     }
 
 }
