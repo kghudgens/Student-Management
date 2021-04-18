@@ -32,15 +32,35 @@ public class App {
 
                 Administrator admin = new Administrator();
                 System.out.println("Welcome " + fullName + " as the administrator you have four options.");
+                // Show the administrator their permissions
+                System.out.println("\nCreate NEW student entry");
+                System.out.println("UPDATE a student's entry");
+                System.out.println("VIEW a student's entry");
+                System.out.println("DELETE a student's entry");
 
-                // To create
-                Administrator.newStudent();
-                // To read
-                admin.viewStudent();
-                // update
-                admin.updateStudent();
-                // to delete
-                Administrator.deleteStudent();
+                String adminChoice = input.nextLine();
+
+                if (adminChoice.equalsIgnoreCase("new")) {
+                    // To create
+
+                    Administrator.newStudent();
+
+                } else if (adminChoice.equalsIgnoreCase("update")) {
+                    // update
+
+                    admin.updateStudent();
+
+                } else if (adminChoice.equalsIgnoreCase("view")) {
+                    // To read
+
+                    admin.viewStudent();
+
+                } else if (adminChoice.equalsIgnoreCase("delete")) {
+                    // to delete
+
+                    Administrator.deleteStudent();
+
+                }
 
                 break;
 
