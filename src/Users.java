@@ -8,7 +8,7 @@ public class Users {
 
     }
 
-    public static void updateStudent() {
+    public void updateStudent() {
 
     }
 
