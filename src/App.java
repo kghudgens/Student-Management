@@ -40,29 +40,47 @@ public class App {
 
                 String adminChoice = input.nextLine();
 
-                if (adminChoice.equalsIgnoreCase("new")) {
-                    // To create
-
+                switch (adminChoice.toLowerCase()) {
+                case "new":
+                    System.out.println("CREATING NEW STUDENT");
                     Administrator.newStudent();
 
-                } else if (adminChoice.equalsIgnoreCase("update")) {
-                    // update
-
+                    break;
+                case "update":
                     admin.updateStudent();
 
-                } else if (adminChoice.equalsIgnoreCase("view")) {
-                    // To read
-
+                    break;
+                case "view":
                     admin.viewStudent();
 
-                } else if (adminChoice.equalsIgnoreCase("delete")) {
-                    // to delete
-
+                    break;
+                case "delete":
                     Administrator.deleteStudent();
 
+                    break;
                 }
 
-                break;
+                // if (adminChoice.equalsIgnoreCase("new")) {
+                // // To create
+
+                // Administrator.newStudent();
+
+                // } else if (adminChoice.equalsIgnoreCase("update")) {
+                // // update
+
+                // admin.updateStudent();
+
+                // } else if (adminChoice.equalsIgnoreCase("view")) {
+                // // To read
+
+                // admin.viewStudent();
+
+                // } else if (adminChoice.equalsIgnoreCase("delete")) {
+                // // to delete
+
+                // Administrator.deleteStudent();
+
+                // }
 
             } else if (usersPurporseSelection.equalsIgnoreCase("teacher")) {
 
@@ -77,8 +95,6 @@ public class App {
                 usersPurporseSelection = input.nextLine();
             }
         }
-
-        // user.userPurpose();
 
     }
 }
