@@ -47,17 +47,22 @@ public class App {
 
                     break;
                 case "update":
+                    System.out.println("UPDATING STUDENT");
                     admin.updateStudent();
 
                     break;
                 case "view":
+                    System.out.println("VIEW STUDENT");
                     admin.viewStudent();
 
                     break;
                 case "delete":
+                    System.out.println("DELETE STUDENT");
                     Administrator.deleteStudent();
 
                     break;
+                default:
+
                 }
 
                 // if (adminChoice.equalsIgnoreCase("new")) {
