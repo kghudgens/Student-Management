@@ -12,4 +12,8 @@ public class Users {
 
     }
 
+    public static void viewAllStudent() {
+
+    }
+
 }
