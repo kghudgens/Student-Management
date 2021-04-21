@@ -21,15 +21,14 @@ public class App {
 
         System.out.println(fullName + " how will you be using the program? As an administrator, teacher, or student?");
 
-                // Take in the users choice
+        // Take in the users choice
         String usersPurporseSelection = input.nextLine();
-
 
         // Deal with the users choice
         switch (usersPurporseSelection.toLowerCase()) {
-            // Create case 1 as if the user deems themselves administrator
+        // Create case 1 as if the user deems themselves administrator
         case "administator":
-        // Create instance of the administrator
+            // Create instance of the administrator
             Administrator admin = new Administrator();
             System.out.println("Welcome " + fullName + " as the administrator you have four options.");
             // Show the administrator their permissions
@@ -37,6 +36,7 @@ public class App {
             System.out.println("\nNEW student entry");
             System.out.println("UPDATE a student's entry");
             System.out.println("VIEW a student's entry");
+            System.out.println("VIEW ALL student entries");
             System.out.println("DELETE a student's entry");
 
             // Collect the users choice
@@ -59,6 +59,9 @@ public class App {
                 admin.viewStudent();
 
                 break;
+            case "view all":
+                // add a view all function
+                break;
             case "delete":
                 System.out.println("DELETE STUDENT");
                 Administrator.deleteStudent();
@@ -68,10 +71,10 @@ public class App {
                 Users.viewAllStudent();
             }
             break;
-// Case two for those that are teachers
-        case "teacher":
 
-            System.out.println("Welcome " + fullName + " as the administrator you have two options.");
+        // Case two for those that are teachers
+        case "teacher":
+            System.out.println("Welcome " + fullName + " as the administrator you have three options.");
             // Present the teachers options
             System.out.println("UPDATE a student's entry");
             System.out.println("VIEW a student's entry");
@@ -79,40 +82,52 @@ public class App {
             // Collect the teachers choice
             String teachersChoice = input.nextLine();
 
-
             // Deal with the users choice as the teacher
-            switch (teachersChoice.toLowerCase()){
-                case "update":
+            switch (teachersChoice.toLowerCase()) {
+            case "update":
 
                 break;
 
-                case "view":
+            case "view":
 
                 break;
-                case "view all":
+            case "view all":
 
                 break;
 
             }
-            case "student":{
-            
+
+            // Case for students
+        case "student": {
+            System.out.println("Welcome " + fullName + " as a student you have two options.");
+            // Present the students options
+            System.out.println("VIEW a student's entry");
+            System.out.println("VIEW all student's entry");
+
+            String studentChoice = input.nextLine();
+            // Deal with the users choice
+            switch (studentChoice.toLowerCase()) {
+            case "view":
+
+                break;
+            case "view all":
+
+                break;
             }
+
+        }
             break;
-
-
-            
         }
 
-        else if (usersPurporseSelection.equalsIgnoreCase("student")) {
+        // else if (usersPurporseSelection.equalsIgnoreCase("q")) {
+        // System.out.println("Thank you for using the Student Management System");
 
-        } else if (usersPurporseSelection.equalsIgnoreCase("q")) {
-            System.out.println("Thank you for using the Student Management System");
-
-        } else {
-            System.out.println("You didnt enter a one of the three options");
-            System.out.println("Please select from being an administrator, teacher, or student");
-            usersPurporseSelection = input.nextLine();
-        }
+        // } else {
+        // System.out.println("You didnt enter a one of the three options");
+        // System.out.println("Please select from being an administrator, teacher, or
+        // student");
+        // usersPurporseSelection = input.nextLine();
+        // }
 
     }
 }
