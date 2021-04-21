@@ -23,82 +23,62 @@ public class App {
 
         String usersPurporseSelection = input.nextLine();
 
-        while (true) {
-            // Take in the users choice
+        // Not BUG but more of cleaning code as it goes
+        // Further research the practices for if else vs switch
+        // while (true) {
+        // Take in the users choice
 
-            // Deal with the users choice
+        // Deal with the users choice
 
-            if (usersPurporseSelection.equalsIgnoreCase("administrator")) {
+        if (usersPurporseSelection.equalsIgnoreCase("administrator")) {
 
-                Administrator admin = new Administrator();
-                System.out.println("Welcome " + fullName + " as the administrator you have four options.");
-                // Show the administrator their permissions
-                System.out.println("\nCreate NEW student entry");
-                System.out.println("UPDATE a student's entry");
-                System.out.println("VIEW a student's entry");
-                System.out.println("DELETE a student's entry");
+            Administrator admin = new Administrator();
+            System.out.println("Welcome " + fullName + " as the administrator you have four options.");
+            // Show the administrator their permissions
+            System.out.println("\nCreate NEW student entry");
+            System.out.println("UPDATE a student's entry");
+            System.out.println("VIEW a student's entry");
+            System.out.println("DELETE a student's entry");
 
-                String adminChoice = input.nextLine();
+            String adminChoice = input.nextLine();
 
-                switch (adminChoice.toLowerCase()) {
-                case "new":
-                    System.out.println("CREATING NEW STUDENT");
-                    Administrator.newStudent();
+            // Dealing with the users choices
+            switch (adminChoice.toLowerCase()) {
+            case "new":
+                System.out.println("CREATING NEW STUDENT");
+                Administrator.newStudent();
 
-                    break;
-                case "update":
-                    System.out.println("UPDATING STUDENT");
-                    admin.updateStudent();
-
-                    break;
-                case "view":
-                    System.out.println("VIEW STUDENT");
-                    admin.viewStudent();
-
-                    break;
-                case "delete":
-                    System.out.println("DELETE STUDENT");
-                    Administrator.deleteStudent();
-
-                    break;
-                default:
-
-                }
-
-                // if (adminChoice.equalsIgnoreCase("new")) {
-                // // To create
-
-                // Administrator.newStudent();
-
-                // } else if (adminChoice.equalsIgnoreCase("update")) {
-                // // update
-
-                // admin.updateStudent();
-
-                // } else if (adminChoice.equalsIgnoreCase("view")) {
-                // // To read
-
-                // admin.viewStudent();
-
-                // } else if (adminChoice.equalsIgnoreCase("delete")) {
-                // // to delete
-
-                // Administrator.deleteStudent();
-
-                // }
-
-            } else if (usersPurporseSelection.equalsIgnoreCase("teacher")) {
-
-            } else if (usersPurporseSelection.equalsIgnoreCase("student")) {
-
-            } else if (usersPurporseSelection.equalsIgnoreCase("q")) {
-                System.out.println("Thank you for using the Student Management System");
                 break;
-            } else {
-                System.out.println("You didnt enter a one of the three options");
-                System.out.println("Please select from being an administrator, teacher, or student");
-                usersPurporseSelection = input.nextLine();
+            case "update":
+                System.out.println("UPDATING STUDENT");
+                admin.updateStudent();
+
+                break;
+            case "view":
+                System.out.println("VIEW STUDENT");
+                admin.viewStudent();
+
+                break;
+            case "delete":
+                System.out.println("DELETE STUDENT");
+                Administrator.deleteStudent();
+
+                break;
+            default:
+                Users.viewAllStudent();
             }
+
+        } else if (usersPurporseSelection.equalsIgnoreCase("teacher")) {
+
+        } else if (usersPurporseSelection.equalsIgnoreCase("student")) {
+
+        } else if (usersPurporseSelection.equalsIgnoreCase("q")) {
+            System.out.println("Thank you for using the Student Management System");
+
+        } else {
+            System.out.println("You didnt enter a one of the three options");
+            System.out.println("Please select from being an administrator, teacher, or student");
+            usersPurporseSelection = input.nextLine();
         }
 
     }
