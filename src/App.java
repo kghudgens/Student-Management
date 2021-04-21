@@ -8,7 +8,7 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println("Hello, welcome to the Management System for the School of Options");
-        // Call functiont that connects to database
+        // Call function that connects to database
         connectDatabase();
 
         // How will the user be using the program
@@ -26,11 +26,15 @@ public class App {
 
         // Deal with the users choice
         switch (usersPurporseSelection.toLowerCase()) {
+
         // Create case 1 as if the user deems themselves administrator
         case "administator":
+
             // Create instance of the administrator
             Administrator admin = new Administrator();
+
             System.out.println("Welcome " + fullName + " as the administrator you have four options.");
+
             // Show the administrator their permissions
             System.out.println("Select from the four:");
             System.out.println("\nNEW student entry");
@@ -44,16 +48,22 @@ public class App {
 
             // Dealing with the users choices
             switch (adminChoice.toLowerCase()) {
+
+            // if the user enters new
             case "new":
                 System.out.println("CREATING NEW STUDENT");
                 Administrator.newStudent();
 
                 break;
+
+            // if the user enters update
             case "update":
                 System.out.println("UPDATING STUDENT");
                 admin.updateStudent();
 
                 break;
+
+            // if the user enters view
             case "view":
                 System.out.println("VIEW STUDENT");
                 admin.viewStudent();
@@ -83,16 +93,17 @@ public class App {
             String teachersChoice = input.nextLine();
 
             // Deal with the users choice as the teacher
+            // Create an instance
             switch (teachersChoice.toLowerCase()) {
             case "update":
-
+                // Call the update function
                 break;
 
             case "view":
-
+                // Call the view function
                 break;
             case "view all":
-
+                // Call the view all function
                 break;
 
             }
@@ -116,19 +127,15 @@ public class App {
             }
 
         }
+        default: {
+            System.out
+                    .println("You did not enter a value that identifies you as a Administrator, Teacher, or Student.");
             break;
+
+        }
+
         }
         input.close();
-
-        // else if (usersPurporseSelection.equalsIgnoreCase("q")) {
-        // System.out.println("Thank you for using the Student Management System");
-
-        // } else {
-        // System.out.println("You didnt enter a one of the three options");
-        // System.out.println("Please select from being an administrator, teacher, or
-        // student");
-        // usersPurporseSelection = input.nextLine();
-        // }
 
     }
 }
