@@ -67,15 +67,43 @@ public class App {
             default:
                 Users.viewAllStudent();
             }
-
+            break;
+// Case two for those that are teachers
         case "teacher":
-            System.out.println("Welcome " + fullName + " as the administrator you have two options.");
 
+            System.out.println("Welcome " + fullName + " as the administrator you have two options.");
+            // Present the teachers options
+            System.out.println("UPDATE a student's entry");
+            System.out.println("VIEW a student's entry");
+            System.out.println("VIEW all student's entry");
+            // Collect the teachers choice
+            String teachersChoice = input.nextLine();
+
+
+            // Deal with the users choice as the teacher
+            switch (teachersChoice.toLowerCase()){
+                case "update":
+
+                break;
+
+                case "view":
+
+                break;
+                case "view all":
+
+                break;
+
+            }
+            case "student":{
+            
+            }
+            break;
+
+
+            
         }
 
-  else if (usersPurporseSelection.equalsIgnoreCase("teacher")) {
-
-        } else if (usersPurporseSelection.equalsIgnoreCase("student")) {
+        else if (usersPurporseSelection.equalsIgnoreCase("student")) {
 
         } else if (usersPurporseSelection.equalsIgnoreCase("q")) {
             System.out.println("Thank you for using the Student Management System");
