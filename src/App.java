@@ -118,6 +118,7 @@ public class App {
         }
             break;
         }
+        input.close();
 
         // else if (usersPurporseSelection.equalsIgnoreCase("q")) {
         // System.out.println("Thank you for using the Student Management System");
