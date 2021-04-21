@@ -21,25 +21,25 @@ public class App {
 
         System.out.println(fullName + " how will you be using the program? As an administrator, teacher, or student?");
 
+                // Take in the users choice
         String usersPurporseSelection = input.nextLine();
 
-        // Not BUG but more of cleaning code as it goes
-        // Further research the practices for if else vs switch
-        // while (true) {
-        // Take in the users choice
 
         // Deal with the users choice
-
-        if (usersPurporseSelection.equalsIgnoreCase("administrator")) {
-
+        switch (usersPurporseSelection.toLowerCase()) {
+            // Create case 1 as if the user deems themselves administrator
+        case "administator":
+        // Create instance of the administrator
             Administrator admin = new Administrator();
             System.out.println("Welcome " + fullName + " as the administrator you have four options.");
             // Show the administrator their permissions
-            System.out.println("\nCreate NEW student entry");
+            System.out.println("Select from the four:");
+            System.out.println("\nNEW student entry");
             System.out.println("UPDATE a student's entry");
             System.out.println("VIEW a student's entry");
             System.out.println("DELETE a student's entry");
 
+            // Collect the users choice
             String adminChoice = input.nextLine();
 
             // Dealing with the users choices
@@ -68,7 +68,12 @@ public class App {
                 Users.viewAllStudent();
             }
 
-        } else if (usersPurporseSelection.equalsIgnoreCase("teacher")) {
+        case "teacher":
+            System.out.println("Welcome " + fullName + " as the administrator you have two options.");
+
+        }
+
+  else if (usersPurporseSelection.equalsIgnoreCase("teacher")) {
 
         } else if (usersPurporseSelection.equalsIgnoreCase("student")) {
 
