@@ -9,12 +9,11 @@ public class Administrator extends Users {
         // Get name
         System.out.println("What is your name? ");
         this.fullName = input.nextLine();
-        System.out.println("Welcome " + this.fullName + " as the administrator you have five options.");
+        System.out.println("Welcome " + this.fullName + " as the administrator you have six options.");
 
         // Provide user options
-        System.out.println("Select from the six options :");
         System.out.println(
-                "\n1. NEW student entry\n 2. UPDATE a student's entry \n3. VIEW a student's entry \n 4. VIEW ALL student entries \n5. DELETE a student's entry \n6. QUIT");
+                "\n1. NEW student entry\n2. UPDATE a student's entry \n3. VIEW a student's entry \n4. VIEW ALL student entries \n5. DELETE a student's entry \n6. QUIT");
 
         // Admins menu choice
         int adminChoice = input.nextInt();
