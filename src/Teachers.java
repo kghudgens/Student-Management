@@ -18,19 +18,19 @@ public class Teachers extends Users {
         System.out.println("VIEW a student's entry");
         System.out.println("VIEW all student's entry");
         // Collect the teachers choice
-        int teachersChoice = input.nextLine();
+        int teachersChoice = input.nextInt();
 
         // Deal with the users choice as the teacher
         // Create an instance
-        switch (teachersChoice.toLowerCase()) {
-            case "update":
+        switch (teachersChoice) {
+            case 1:
                 // Call the update function
                 break;
 
-            case "view":
+            case 2:
                 // Call the view function
                 break;
-            case "view all":
+            case 3:
                 // Call the view all function
                 break;
         }
