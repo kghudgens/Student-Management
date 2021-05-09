@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 public class Administrator extends Users {
+    Scanner input = new Scanner(System.in);
 
     // Extends the user class
     // Possess the ability for CRUD against student database
@@ -7,7 +10,7 @@ public class Administrator extends Users {
      */
 
     public Administrator() {
-        System.out.println("Administrator yall");
+
     }
 
     public static void newStudent() {
