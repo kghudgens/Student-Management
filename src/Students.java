@@ -19,7 +19,7 @@ public class Students extends Users {
     // Update only their entry
 
     public Students() {
-        //
+        // Gather student info for to only show the student their information
         System.out.println("Welcome, what is your first name? ");
         this.firstName = input.nextLine();
 
@@ -32,17 +32,19 @@ public class Students extends Users {
 
         System.out.println("Welcome as a student you have two options.");
         // Present the students options
-        System.out.println("VIEW their own student entry");
-        System.out.println("UPDATE their own student entry");
+        System.out.println("\n1.VIEW their own student entry \n2. Update their own student entry");
 
-        String studentChoice = input.nextLine();
+        int studentChoice = input.nextInt();
+        input.nextInt();
         // Deal with the users choice
-        switch (studentChoice.toLowerCase()) {
-            case "view":
-
+        switch (studentChoice) {
+            case 1:
+                System.out.println("You have selected to VIEW your own entry");
+                viewStudent();
                 break;
-            case "view all":
-
+            case 2:
+                System.out.println("You have selected to UPDATE your own entry");
+                updateStudent();
                 break;
         }
     }
