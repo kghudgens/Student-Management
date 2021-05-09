@@ -32,31 +32,13 @@ public class App {
 
             // Case two for those that are teachers
             case 2:
-                System.out.println("Welcome as the administrator you have three options.");
-                // Present the teachers options
-                System.out.println("UPDATE a student's entry");
-                System.out.println("VIEW a student's entry");
-                System.out.println("VIEW all student's entry");
-                // Collect the teachers choice
-                String teachersChoice = input.nextLine();
 
-                // Deal with the users choice as the teacher
-                // Create an instance
-                switch (teachersChoice.toLowerCase()) {
-                    case "update":
-                        // Call the update function
-                        break;
+                System.out.println("You have selected Teacher");
 
-                    case "view":
-                        // Call the view function
-                        break;
-                    case "view all":
-                        // Call the view all function
-                        break;
+                Teachers teacher = new Teachers();
+                break;
 
-                }
-
-                // Case for students
+            // Case for students
             case 3: {
                 System.out.println("Welcome as a student you have two options.");
                 // Present the students options
