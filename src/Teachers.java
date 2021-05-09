@@ -14,7 +14,7 @@ public class Teachers extends Users {
         // Dealing with the users choices
         System.out.println("Welcome " + this.name + "as a teacher you have three options.");
         // Present the teachers options
-        System.out.println("\n1. UPDATE a student's entry");
+        System.out.println("\n1. UPDATE a student's entry \n2.View a student's entry  \n3. VIEW ALL student entries");
         System.out.println("VIEW a student's entry");
         System.out.println("VIEW all student's entry");
         // Collect the teachers choice
