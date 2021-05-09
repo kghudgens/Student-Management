@@ -15,8 +15,6 @@ public class Teachers extends Users {
         System.out.println("Welcome " + this.name + "as a teacher you have three options.");
         // Present the teachers options
         System.out.println("\n1. UPDATE a student's entry \n2.View a student's entry  \n3. VIEW ALL student entries");
-        System.out.println("VIEW a student's entry");
-        System.out.println("VIEW all student's entry");
         // Collect the teachers choice
         int teachersChoice = input.nextInt();
 
@@ -24,14 +22,16 @@ public class Teachers extends Users {
         // Create an instance
         switch (teachersChoice) {
             case 1:
-                // Call the update function
+                System.out.println("You have selected to UPDATE a student's entry");
+                updateStudent();
                 break;
-
             case 2:
-                // Call the view function
+                System.out.println("You have selected VIEW a student's entry");
+                viewStudent();
                 break;
             case 3:
-                // Call the view all function
+                System.out.println("You have selected to VIEW ALL student entries");
+                viewAllStudent();
                 break;
         }
     }
