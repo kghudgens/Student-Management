@@ -3,6 +3,16 @@ import java.util.Scanner;
 public class Students extends Users {
     Scanner input = new Scanner(System.in);
 
+    public String firstName;
+    public String lastName;
+    public String goal;
+    public String phoneNumber;
+    public String classOne;
+    public String classTwo;
+    public String classThree;
+    public String classFour;
+    public String favoriteSubject;
+
     // Extends the user class
     // Possess the ability to R against student database
     // Update only their entry
