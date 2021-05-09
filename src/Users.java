@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Users {
 
     // all users can view students in the database
@@ -12,7 +10,7 @@ public class Users {
 
     }
 
-    public static void viewAllStudent() {
+    public void viewAllStudent() {
 
     }
 
