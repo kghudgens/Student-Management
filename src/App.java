@@ -29,39 +29,24 @@ public class App {
                 // Create instance of the administrator
                 Administrator admin = new Administrator();
                 break;
-
             // Case two for those that are teachers
             case 2:
-
                 System.out.println("You have selected Teacher");
-
+                // Instance of the teacher
                 Teachers teacher = new Teachers();
                 break;
 
             // Case for students
             case 3: {
-                System.out.println("Welcome as a student you have two options.");
-                // Present the students options
-                System.out.println("VIEW a student's entry");
-                System.out.println("VIEW all student's entry");
-
-                String studentChoice = input.nextLine();
-                // Deal with the users choice
-                switch (studentChoice.toLowerCase()) {
-                    case "view":
-
-                        break;
-                    case "view all":
-
-                        break;
-                }
-
+                System.out.println("You have selected Student");
+                // Instance of student
+                Students student = new Students();
+                break;
             }
             default: {
                 System.out.println(
                         "You did not enter a value that identifies you as a Administrator, Teacher, or Student.");
                 break;
-
             }
 
         }
