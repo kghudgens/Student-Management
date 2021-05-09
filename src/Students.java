@@ -12,17 +12,28 @@ public class Students extends Users {
     public String classThree;
     public String classFour;
     public String favoriteSubject;
+    public int studentID;
 
     // Extends the user class
     // Possess the ability to R against student database
     // Update only their entry
 
     public Students() {
+        //
+        System.out.println("Welcome, what is your first name? ");
+        this.firstName = input.nextLine();
+
+        System.out.println("Welcome what is your last name? ");
+        this.lastName = input.nextLine();
+
+        System.out.println("What is your five digit Student ID?");
+        this.studentID = input.nextInt();
+        input.nextLine();
 
         System.out.println("Welcome as a student you have two options.");
         // Present the students options
-        System.out.println("VIEW a student's entry");
-        System.out.println("VIEW all student's entry");
+        System.out.println("VIEW their own student entry");
+        System.out.println("UPDATE their own student entry");
 
         String studentChoice = input.nextLine();
         // Deal with the users choice
