@@ -4,7 +4,7 @@
 
 Desktop application created with java. 
 
-A project that will me learn how to work with PostgreSQL databases and the SQL language. Along with further improving my Java skills.
+A project that will help me learn how to better work with MySQL and the SQL language. Along with further improving my Java skills.
 
 ## Contributors
 
