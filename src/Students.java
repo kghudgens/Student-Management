@@ -3,17 +3,6 @@ import java.util.Scanner;
 public class Students extends Users {
     Scanner input = new Scanner(System.in);
 
-    public String firstName;
-    public String lastName;
-    public String goal;
-    public String phoneNumber;
-    public String classOne;
-    public String classTwo;
-    public String classThree;
-    public String classFour;
-    public String favoriteSubject;
-    public int studentID;
-
     // Extends the user class
     // Possess the ability to R against student database
     // Update only their entry
@@ -32,10 +21,12 @@ public class Students extends Users {
 
         System.out.println("Welcome as a student you have two options.");
         // Present the students options
-        System.out.println("\n1.VIEW their own student entry \n2. Update their own student entry");
+        System.out.println("\n1.VIEW " + this.firstName + this.lastName + " student entry \n2. UPDATE " + this.firstName
+                + this.lastName + " student entry");
 
         int studentChoice = input.nextInt();
-        input.nextInt();
+        input.nextLine();
+
         // Deal with the users choice
         switch (studentChoice) {
             case 1:
@@ -50,11 +41,11 @@ public class Students extends Users {
     }
 
     public void updateStudent() {
-
+        System.out.println("Update");
     }
 
     public void viewStudent() {
-
+        System.out.println("View");
     }
 
 }
