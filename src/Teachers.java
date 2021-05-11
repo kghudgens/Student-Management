@@ -17,6 +17,7 @@ public class Teachers extends Users {
         System.out.println("\n1. UPDATE a student's entry \n2.View a student's entry  \n3. VIEW ALL student entries");
         // Collect the teachers choice
         int teachersChoice = input.nextInt();
+        input.nextLine();
 
         // Deal with the users choice as the teacher
         // Create an instance
