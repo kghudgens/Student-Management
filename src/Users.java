@@ -54,6 +54,22 @@ public class Users {
 
     public void updateStudent() {
         getStudentID();
+
+        System.out.println("What would you like to update?");
+        System.out.println(
+                "1. First Name \n2. Last Name \n3. Student Goal\n4. Phone Number \n5. Favorite Subject \n6.Courses (1-4)");
+
+        int userSelection = input.nextInt();
+
+        switch (userSelection) {
+            case 1:
+
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+        }
     }
 
     public void viewAllStudent() {
