@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
 public class Users {
+
+    public void getStudentID() {
+        // Will be reused
+        System.out.println("Please enter the five digit Student Identification Number?");
+        this.studentID = input.nextInt();
+        input.nextLine();
+    }
+
     Scanner input = new Scanner(System.in);
 
     public String firstName;
@@ -16,11 +24,8 @@ public class Users {
 
     // all users can view students in the database
     public void viewStudent() {
-        System.out.println("VIEW");
-        System.out.println("Please enter the five digit Student Identification Number?");
-
-        this.studentID = input.nextInt();
-
+        getStudentID();
+        System.out.println(this.studentID);
         // Prepared statement
     }
 
