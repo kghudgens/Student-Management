@@ -23,7 +23,13 @@ public class Users {
     }
 
     public void getGoal() {
+        System.out.println("What is the goal of the student?");
+        this.goal = input.nextLine();
+    }
 
+    public void number() {
+        System.out.println("What is the students phone number?");
+        this.phoneNumber = input.nextLine();
     }
 
     Scanner input = new Scanner(System.in);
