@@ -55,20 +55,23 @@ public class Users {
     public void updateStudent() {
         getStudentID();
 
+        // Call method that retrieves this student by ID viewStudent()
+
         System.out.println("What would you like to update?");
-        System.out.println(
-                "1. First Name \n2. Last Name \n3. Student Goal\n4. Phone Number \n5. Favorite Subject \n6.Courses (1-4)");
+        System.out.println("1. Full Name \n2. Student Goal\n3. Phone Number \n4. Favorite Subject \n5.Courses (1-4)");
 
         int userSelection = input.nextInt();
 
         switch (userSelection) {
             case 1:
+                System.out.println("You selected to change the students first name?");
+                getName();
 
+                // Call function with name passed into it
             case 2:
             case 3:
             case 4:
             case 5:
-            case 6:
         }
     }
 
