@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class Users {
+    Scanner input = new Scanner(System.in);
+
     public String firstName;
     public String lastName;
     public String goal;
@@ -12,8 +16,12 @@ public class Users {
 
     // all users can view students in the database
     public void viewStudent() {
-        // View a student
+        System.out.println("VIEW");
+        System.out.println("Please enter the five digit Student Identification Number?");
 
+        this.studentID = input.nextInt();
+
+        // Prepared statement
     }
 
     public void updateStudent() {
