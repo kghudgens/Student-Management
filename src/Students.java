@@ -41,11 +41,13 @@ public class Students extends Users {
     }
 
     public void updateStudent() {
-        System.out.println("Update");
+        getStudentID();
+
     }
 
     public void viewStudent() {
-        System.out.println("View");
+        getStudentID();
+
     }
 
 }
