@@ -63,14 +63,14 @@ public class Administrator extends Users {
 
     }
 
-    public static void newStudent() {
+    public void newStudent() {
 
     }
 
     /**
      * Deletes the student
      */
-    public static void deleteStudent() {
+    public void deleteStudent() {
 
     }
 
