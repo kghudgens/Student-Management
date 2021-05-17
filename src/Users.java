@@ -38,10 +38,7 @@ public class Users {
     public String lastName;
     public String goal;
     public String phoneNumber;
-    public String classOne;
-    public String classTwo;
-    public String classThree;
-    public String classFour;
+    public String course;
     public String favoriteSubject;
     public int studentID;
 
@@ -58,7 +55,7 @@ public class Users {
         // Call method that retrieves this student by ID viewStudent()
 
         System.out.println("What would you like to update?");
-        System.out.println("1. Full Name \n2. Student Goal\n3. Phone Number \n4. Favorite Subject \n5.Courses (1-4)");
+        System.out.println("1. Full Name \n2. Student Goal\n3. Phone Number \n4. Favorite Subject \n5.Courses");
 
         int userSelection = input.nextInt();
 
