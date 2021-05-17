@@ -2,14 +2,15 @@ import java.util.Scanner;
 
 public class Administrator extends Users {
 
-    public String fullName;
+    public String adminFirstName;
+    public String adminLastName;
     Scanner input = new Scanner(System.in);
 
     public Administrator() {
         // Get name
-        System.out.println("What is your name? ");
-        this.fullName = input.nextLine();
-        System.out.println("Welcome " + this.fullName + " as the administrator you have six options.");
+        System.out.println("What is your first name? ");
+        this.adminFirstName = input.nextLine();
+        System.out.println("Welcome " + this.adminFirstName + " as the administrator you have six options.");
 
         // Provide user options
         System.out.println(
