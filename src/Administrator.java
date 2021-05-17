@@ -4,6 +4,9 @@ public class Administrator extends Users {
 
     public String adminFirstName;
     public String adminLastName;
+
+    public String adminID;
+
     Scanner input = new Scanner(System.in);
 
     public Administrator() {
@@ -11,6 +14,9 @@ public class Administrator extends Users {
         System.out.println("What is your first name? ");
         this.adminFirstName = input.nextLine();
         System.out.println("Welcome " + this.adminFirstName + " as the administrator you have six options.");
+        // Get admin ID to make sure user has permissions
+        System.out.println("What is your Five digit Administrator ID?");
+        this.adminID = input.nextLine();
 
         // Provide user options
         System.out.println(
@@ -45,7 +51,7 @@ public class Administrator extends Users {
                 break;
             case 6:
                 System.out.println("You have selected Quit");
-                System.out.println("Good Bye " + this.fullName);
+                System.out.println("Good Bye " + this.adminFirstName);
                 break;
             default:
                 System.out.println(
