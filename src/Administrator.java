@@ -20,7 +20,7 @@ public class Administrator extends Users {
 
         // Provide user options
         System.out.println(
-                "\n1. NEW student entry\n2. UPDATE a student's entry \n3. VIEW a student's entry \n4. VIEW ALL student entries \n5. DELETE a student's entry \n6. QUIT");
+                "\n1. NEW student entry\n2. UPDATE a student's entry \n3. VIEW a student's entry \n4. VIEW ALL student entries \n5. DELETE a student's entry \n6. View School Information \n6. QUIT");
 
         // Admins menu choice
         int adminChoice = input.nextInt();
@@ -50,6 +50,9 @@ public class Administrator extends Users {
                 deleteStudent();
                 break;
             case 6:
+                System.out.println("You have selected to view the school information");
+                viewSchoolInformation();
+            case 7:
                 System.out.println("You have selected Quit");
                 System.out.println("Good Bye " + this.adminFirstName);
                 break;
@@ -68,6 +71,10 @@ public class Administrator extends Users {
      * Deletes the student
      */
     public static void deleteStudent() {
+
+    }
+
+    public void viewSchoolInformation() {
 
     }
 
