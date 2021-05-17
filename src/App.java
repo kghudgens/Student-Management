@@ -8,6 +8,12 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println("Hello, welcome to the Management System for the School of Options");
+
+        // Explain to new users the programs goal
+
+        System.out.println(
+                "This program connects to the School Management System's Database and gives the user access to data of the students and Staff.\n");
+
         // Call function that connects to database
         connectDatabase();
 
@@ -15,7 +21,7 @@ public class App {
         Scanner input = new Scanner(System.in);
         // Prompt the user with their choices of privileges
 
-        System.out.println(" How will you be using the program? \n1. Administrator \n2. Teacher \n3. student?");
+        System.out.println(" How will you be using the program? \n1. Administrator \n2. Teacher \n3. Student");
 
         // Take in the users choice
         int usersPurporseSelection = input.nextInt();
