@@ -22,11 +22,19 @@ public class Users {
         this.lastName = input.nextLine();
     }
 
+    /**
+     * Function that gets the goal of the student, sets it in the attributes and
+     * gets it staged for the upcoming prepared statement
+     */
     public void getGoal() {
         System.out.println("What is the goal of the student?");
         this.goal = input.nextLine();
     }
 
+    /**
+     * Function that gets the phone number of the student, sets it in the attributes
+     * and gets it staged for the upcoming prepared statement
+     */
     public void number() {
         System.out.println("What is the students phone number?");
         this.phoneNumber = input.nextLine();
@@ -46,7 +54,8 @@ public class Users {
     public void viewStudent() {
         getStudentID();
 
-        // Prepared statement
+        // Prepared statement that compares the student ID and gathers that particular
+        // students information
     }
 
     public void updateStudent() {
