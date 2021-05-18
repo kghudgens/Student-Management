@@ -20,4 +20,22 @@ public class Driver {
             System.out.println("VendorError: " + ex.getErrorCode());
         }
     }
+
+    public void viewSchool() {
+        try {
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM schools");
+        } catch (SQLException ex) {
+
+        }
+
+    }
+
+    public void viewStudent() {
+
+    }
+
+    public void viewAllStudents() {
+
+    }
 }
