@@ -5,10 +5,15 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 
 public class Driver {
+    // create connection, statement, result set objects in the top level scope
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
 
+    /**
+     * This function starts the connection to the MySQL DB tables or produces an
+     * error message for troublshooting
+     */
     public void connectDatabase() {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management");
@@ -20,6 +25,10 @@ public class Driver {
         }
     }
 
+    /**
+     * Creates SELECT ALL query that returns all school information added to the
+     * MySQL database
+     */
     public void viewSchool() {
         try {
             stmt = conn.createStatement();
