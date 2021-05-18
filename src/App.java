@@ -10,7 +10,9 @@ public class App {
                 "This program connects to the School Management System's Database and gives the user access to data of the students and Staff.\n");
 
         // Call function that connects to database
-        Driver.connectDatabase();
+        Driver driver = new Driver();
+
+        driver.connectDatabase();
 
         // How will the user be using the program
         Scanner input = new Scanner(System.in);
