@@ -7,7 +7,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello, welcome to the Management System for the School of Options");
+        System.out.println("\nHello, welcome to the Management System for the School of Options");
 
         // Explain to new users the programs goal
 
