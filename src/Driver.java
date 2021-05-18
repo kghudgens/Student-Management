@@ -10,7 +10,6 @@ public class Driver {
     ResultSet rs = null;
 
     public void connectDatabase() {
-
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management");
         } catch (SQLException ex) {
@@ -26,7 +25,9 @@ public class Driver {
             stmt = conn.createStatement();
             rs = stmt.executeQuery("SELECT * FROM schools");
         } catch (SQLException ex) {
-
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
         }
 
     }
