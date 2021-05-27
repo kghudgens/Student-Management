@@ -9,7 +9,7 @@ public class Administrator extends Users {
 
     Scanner input = new Scanner(System.in);
 
-    private Administrator() {
+    public Administrator() {
         // Get name
         System.out.println("What is your first name? ");
         this.adminFirstName = input.nextLine();

@@ -14,7 +14,7 @@ public class Driver {
      * This function starts the connection to the MySQL DB tables or produces an
      * error message for troublshooting
      */
-    private Driver() {
+    public Driver() {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management");
         } catch (SQLException ex) {
@@ -41,11 +41,11 @@ public class Driver {
 
     }
 
-    public void viewStudent() {
+    public void getStudent() {
 
     }
 
-    public void viewAllStudents() {
+    public void getAllStudents() {
 
     }
 }
