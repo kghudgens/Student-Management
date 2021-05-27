@@ -12,8 +12,6 @@ public class App {
         // Call function that connects to database
         Driver driver = new Driver();
 
-        driver.connectDatabase();
-
         // How will the user be using the program
         Scanner input = new Scanner(System.in);
         // Prompt the user with their choices of privileges
