@@ -14,7 +14,7 @@ public class Driver {
      * This function starts the connection to the MySQL DB tables or produces an
      * error message for troublshooting
      */
-    public void connectDatabase() {
+    private Driver() {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management");
         } catch (SQLException ex) {
