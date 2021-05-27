@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Administrator extends Users {
 
-    public String adminFirstName;
-    public String adminLastName;
+    private String adminFirstName;
+    private String adminLastName;
 
-    public String adminID;
+    private String adminID;
 
     Scanner input = new Scanner(System.in);
 
-    public Administrator() {
+    private Administrator() {
         // Get name
         System.out.println("What is your first name? ");
         this.adminFirstName = input.nextLine();
@@ -63,18 +63,20 @@ public class Administrator extends Users {
 
     }
 
-    public void newStudent() {
+    private void newStudent() {
 
     }
 
     /**
      * Deletes the student
      */
-    public void deleteStudent() {
+    private void deleteStudent() {
 
     }
 
-    public void viewSchoolInformation() {
+    // TODO: find out how to call the view school method
+    private void viewSchoolInformation() {
+        // driver.viewSchool();
 
     }
 
