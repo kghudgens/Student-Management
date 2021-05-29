@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
 public class Users {
+    Scanner input = new Scanner(System.in);
 
+    public String firstName;
+    public String lastName;
+    public String goal;
+    public String phoneNumber;
+    public String course;
+    public String favoriteSubject;
+    public int studentID;
     /**
      * Function that gets the unique student ID to match them to database
      */
@@ -40,15 +48,7 @@ public class Users {
         this.phoneNumber = input.nextLine();
     }
 
-    Scanner input = new Scanner(System.in);
 
-    public String firstName;
-    public String lastName;
-    public String goal;
-    public String phoneNumber;
-    public String course;
-    public String favoriteSubject;
-    public int studentID;
 
     // all users can view students in the database
     public void viewStudent() {
