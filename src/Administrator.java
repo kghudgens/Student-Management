@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
 public class Administrator extends Users {
+    /**
+     * Instance of the student for the administrator to work with
+     */
+    public class Student {
+        private String studentFirstName;
+        private String studentLastName;
+
+    }
 
     private String adminFirstName;
     private String adminLastName;
