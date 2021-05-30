@@ -25,6 +25,15 @@ public class Administrator extends Users {
             this.studentLastName = input.nextLine();
         }
 
+        /**
+         * sets the student ID for the student instance
+         */
+        private void setStudentID() {
+            System.out.println("Student ID:");
+            this.studentID = input.nextInt();
+            input.nextLine();
+        }
+
     }
 
     private String adminFirstName;
