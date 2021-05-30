@@ -16,7 +16,7 @@ public class App {
         Scanner input = new Scanner(System.in);
         // Prompt the user with their choices of privileges
 
-        System.out.println(" How will you be using the program? \n1. Administrator \n2. Teacher \n3. Student");
+        System.out.println(" How will you be using the program? \n1. Administrator \n2. Teacher ");
 
         // Take in the users choice
         int usersPurporseSelection = input.nextInt();
