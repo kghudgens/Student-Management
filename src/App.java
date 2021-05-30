@@ -5,21 +5,23 @@ public class App {
         System.out.println("\nHello, welcome to the Management System for the School of Options");
 
         // Explain to new users the programs goal
-
         System.out.println(
                 "This program connects to the School Management System's Database and gives the user access to data of the students and Staff.\n");
 
         // Call function that connects to database
         Driver driver = new Driver();
 
-        // How will the user be using the program
+        // Create scanner object
         Scanner input = new Scanner(System.in);
-        // Prompt the user with their choices of privileges
 
+        // Prompt the user for administrator or teacher to decide the permissions for
+        // the user
         System.out.println(" How will you be using the program? \n1. Administrator \n2. Teacher ");
 
         // Take in the users choice
         int usersPurporseSelection = input.nextInt();
+        // consume the line
+        input.nextLine();
 
         // Deal with the users choice
         switch (usersPurporseSelection) {
