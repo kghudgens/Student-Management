@@ -7,6 +7,23 @@ public class Administrator extends Users {
     public class Student {
         private String studentFirstName;
         private String studentLastName;
+        private int studentID;
+
+        /**
+         * Initialize student instance
+         */
+        public Student() {
+            // Gather information on the attributes for the student
+            System.out.println("Student ID:");
+            this.studentID = input.nextInt();
+            input.nextLine();
+
+            System.out.println("Student First Name: ");
+            this.studentFirstName = input.nextLine();
+
+            System.out.println("Student Last Name:");
+            this.studentLastName = input.nextLine();
+        }
 
     }
 
