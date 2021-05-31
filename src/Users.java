@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
 public class Users {
+    // Instance of the driver class
+    Driver driver = new Driver();
+
     Scanner input = new Scanner(System.in);
 
     public String firstName;
     public String lastName;
-    public String goal;
     public String phoneNumber;
-    public String course;
-    public String favoriteSubject;
     public int studentID;
+
     /**
      * Function that gets the unique student ID to match them to database
      */
@@ -31,15 +32,6 @@ public class Users {
     }
 
     /**
-     * Function that gets the goal of the student, sets it in the attributes and
-     * gets it staged for the upcoming prepared statement
-     */
-    public void getGoal() {
-        System.out.println("What is the goal of the student?");
-        this.goal = input.nextLine();
-    }
-
-    /**
      * Function that gets the phone number of the student, sets it in the attributes
      * and gets it staged for the upcoming prepared statement
      */
@@ -48,14 +40,17 @@ public class Users {
         this.phoneNumber = input.nextLine();
     }
 
-
-
     // all users can view students in the database
     public void viewStudent() {
         getStudentID();
 
         // Prepared statement that compares the student ID and gathers that particular
         // students information
+    }
+
+    public void viewSchoolInformation() {
+        driver.viewSchool();
+
     }
 
     public void updateStudent() {
