@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Administrator extends Users {
-    Scanner input = new Scanner(System.in);
 
     /**
      * Instance of the student for the administrator to submit to database
@@ -52,12 +51,6 @@ public class Administrator extends Users {
      * Deletes the student
      */
     private void deleteStudent() {
-
-    }
-
-    // TODO: find out how to call the view school method
-    private void viewSchoolInformation() {
-        // driver.viewSchool();
 
     }
 
