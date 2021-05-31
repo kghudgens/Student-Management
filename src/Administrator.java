@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Administrator extends Users {
+    Scanner input = new Scanner(System.in);
+
     /**
-     * Instance of the student for the administrator to work with
+     * Instance of the student for the administrator to submit to database
      */
     public class Student {
         private String studentFirstName;
@@ -36,25 +38,44 @@ public class Administrator extends Users {
 
     }
 
+    // Attributes that define the administrator instance
     private String adminFirstName;
     private String adminLastName;
 
     private String adminID;
 
-    Scanner input = new Scanner(System.in);
+    private void submitNewStudent(String firstName, String lastName, int ID) {
+
+    }
+
+    /**
+     * Deletes the student
+     */
+    private void deleteStudent() {
+
+    }
+
+    // TODO: find out how to call the view school method
+    private void viewSchoolInformation() {
+        // driver.viewSchool();
+
+    }
 
     public Administrator() {
+
         // Get name
         System.out.println("What is your first name? ");
         this.adminFirstName = input.nextLine();
+
         System.out.println("Welcome " + this.adminFirstName + " as the administrator you have six options.");
+
         // Get admin ID to make sure user has permissions
         System.out.println("What is your Five digit Administrator ID?");
         this.adminID = input.nextLine();
 
         // Provide user options
         System.out.println(
-                "\n1. NEW student entry\n2. UPDATE a student's entry \n3. VIEW a student's entry \n4. VIEW ALL student entries \n5. DELETE a student's entry \n6. View School Information \n6. QUIT");
+                "\n1. New student entry\n2. Update a student's entry \n3. View a student's entry \n4. View all student entries \n5. Delete a student's entry \n6. View School Information \n6. QUIT");
 
         // Admins menu choice
         int adminChoice = input.nextInt();
@@ -64,8 +85,12 @@ public class Administrator extends Users {
         // Switch statement handling the comparison of the admin choice statement
         switch (adminChoice) {
             case 1:
+                // Inform user about choice
                 System.out.println("You have selected created NEW student entry");
-                newStudent();
+                // Create instance of student to submit to database
+                Student student = new Student();
+                // use recently created instance to submit to database by passing into function
+                submitNewStudent(student.studentFirstName, student.studentLastName, student.studentID);
                 break;
             case 2:
                 System.out.println("You have selected created UPDATE student entry");
@@ -94,23 +119,6 @@ public class Administrator extends Users {
                 System.out.println(
                         "You have not selected a valid choice. By default all student entries will be displayed");
         }
-
-    }
-
-    private void newStudent() {
-
-    }
-
-    /**
-     * Deletes the student
-     */
-    private void deleteStudent() {
-
-    }
-
-    // TODO: find out how to call the view school method
-    private void viewSchoolInformation() {
-        // driver.viewSchool();
 
     }
 
