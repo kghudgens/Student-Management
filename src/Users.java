@@ -6,6 +6,41 @@ public class Users {
 
     Scanner input = new Scanner(System.in);
 
+    /**
+     * Instance of the student for the administrator to submit to database
+     */
+    public class Student {
+        private String studentFirstName;
+        private String studentLastName;
+        private int studentID;
+
+        /**
+         * Initialize student instance
+         */
+        public Student() {
+            // Gather information on the attributes for the student
+            System.out.println("Student ID:");
+            this.studentID = input.nextInt();
+            input.nextLine();
+
+            System.out.println("Student First Name: ");
+            this.studentFirstName = input.nextLine();
+
+            System.out.println("Student Last Name:");
+            this.studentLastName = input.nextLine();
+        }
+
+        /**
+         * sets the student ID for the student instance
+         */
+        private void setStudentID() {
+            System.out.println("Student ID:");
+            this.studentID = input.nextInt();
+            input.nextLine();
+        }
+
+    }
+
     public String firstName;
     public String lastName;
     public String phoneNumber;
